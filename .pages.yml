@@ -1,0 +1,331 @@
+media:
+  input: assets
+  output: /assets
+  rename: safe
+content:
+- name: home
+  label: 01 — Home & photos
+  type: file
+  path: data/home.json
+  format: json
+  operations:
+    delete: false
+  fields:
+  - name: name
+    label: Full name
+    type: string
+  - name: short_name
+    label: Short name
+    type: string
+  - name: field
+    label: Field / study
+    type: string
+  - name: hero_line_1
+    label: Main heading line 1
+    type: string
+  - name: hero_line_2
+    label: Main heading line 2 (italic)
+    type: string
+  - name: description
+    label: Introduction text
+    type: text
+  - name: eyebrow
+    label: Small title at the top
+    type: string
+  - name: portrait
+    label: Portrait
+    type: image
+  - name: campus_image
+    label: University / background photo
+    type: image
+  - name: portrait_caption
+    label: Portrait caption
+    type: string
+  - name: location
+    label: University / city label
+    type: string
+- name: about
+  label: 02 — About & education
+  type: file
+  path: data/about.json
+  format: json
+  operations:
+    delete: false
+  fields:
+  - name: headline_line_1
+    label: Heading line 1
+    type: string
+  - name: headline_line_2
+    label: Heading line 2
+    type: string
+  - name: intro
+    label: Main about text
+    type: text
+  - name: paragraph
+    label: Second paragraph
+    type: text
+  - name: education
+    label: Education
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{institution}'
+    fields:
+    - name: date
+      label: Date
+      type: string
+    - name: institution
+      label: Institution
+      type: string
+    - name: degree
+      label: Qualification
+      type: text
+- name: research
+  label: 03 — Research projects & PDF
+  type: file
+  path: data/research.json
+  format: json
+  operations:
+    delete: false
+  fields:
+  - name: headline_line_1
+    label: Heading line 1
+    type: string
+  - name: headline_line_2
+    label: Heading line 2
+    type: string
+  - name: introduction
+    label: Section intro
+    type: text
+  - name: projects
+    label: Scientific projects
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{title_line_2}'
+    fields:
+    - name: label
+      label: Project category
+      type: string
+    - name: title_line_1
+      label: Title line 1
+      type: string
+    - name: title_line_2
+      label: Title line 2
+      type: string
+    - name: subtitle
+      label: Subtitle
+      type: text
+    - name: description
+      label: Project description
+      type: text
+    - name: techniques
+      label: Techniques (add separate items)
+      type: string
+      list: true
+    - name: pdf
+      label: Full research paper (PDF)
+      type: file
+      options:
+        extensions:
+        - pdf
+- name: materials
+  label: 04 — EMAC 125 & graphs
+  type: file
+  path: data/materials.json
+  format: json
+  operations:
+    delete: false
+  fields:
+  - name: headline_line_1
+    label: Heading line 1
+    type: string
+  - name: headline_line_2
+    label: Heading line 2
+    type: string
+  - name: intro
+    label: Intro
+    type: text
+  - name: overall
+    label: Overall research
+    type: text
+  - name: focus
+    label: My research focus
+    type: text
+  - name: image_1
+    label: MATLAB visual
+    type: image
+  - name: caption_1
+    label: MATLAB caption
+    type: text
+  - name: image_2
+    label: Particle interactions visual
+    type: image
+  - name: caption_2
+    label: Second visual caption
+    type: text
+- name: activities
+  label: 05 — Activities
+  type: file
+  path: data/activities.json
+  format: json
+  operations:
+    delete: false
+  fields:
+  - name: headline_line_1
+    label: Heading line 1
+    type: string
+  - name: headline_line_2
+    label: Heading line 2
+    type: string
+  - name: intro
+    label: Intro
+    type: text
+  - name: academic
+    label: Academic and science
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{name}'
+    fields:
+    - name: name
+      label: Activity
+      type: string
+    - name: details
+      label: Details
+      type: text
+    - name: period
+      label: Date / years
+      type: string
+  - name: community
+    label: Leadership and community
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{name}'
+    fields:
+    - name: name
+      label: Activity
+      type: string
+    - name: details
+      label: Details
+      type: text
+    - name: period
+      label: Date / years
+      type: string
+  - name: sports
+    label: Athletics
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{name}'
+    fields:
+    - name: name
+      label: Activity
+      type: string
+    - name: details
+      label: Details
+      type: text
+    - name: period
+      label: Date / years
+      type: string
+- name: work
+  label: 06 — Work experience
+  type: file
+  path: data/work.json
+  format: json
+  operations:
+    delete: false
+  fields:
+  - name: headline_line_1
+    label: Heading line 1
+    type: string
+  - name: headline_line_2
+    label: Heading line 2
+    type: string
+  - name: intro
+    label: Intro
+    type: text
+  - name: jobs
+    label: Work experience
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{company}'
+    fields:
+    - name: period
+      label: Date range
+      type: string
+    - name: company
+      label: Company
+      type: string
+    - name: location
+      label: City
+      type: string
+    - name: role
+      label: Role
+      type: string
+- name: contact
+  label: 07 — Contact
+  type: file
+  path: data/contact.json
+  format: json
+  operations:
+    delete: false
+  fields:
+  - name: headline_line_1
+    label: Heading line 1
+    type: string
+  - name: headline_line_2
+    label: Heading line 2
+    type: string
+  - name: intro
+    label: Contact introduction
+    type: text
+  - name: email
+    label: Email
+    type: string
+  - name: telephone
+    label: Phone (optional)
+    type: string
+  - name: city
+    label: City
+    type: string
+- name: extra
+  label: 08 — Extra image / new item
+  type: file
+  path: data/extra.json
+  format: json
+  operations:
+    delete: false
+  fields:
+  - name: enabled
+    label: Show this new section on the website
+    type: boolean
+  - name: category
+    label: Category
+    type: string
+  - name: title
+    label: Heading
+    type: string
+  - name: description
+    label: Text / description
+    type: text
+  - name: image
+    label: Extra image, certificate or diagram
+    type: image
+  - name: image_caption
+    label: Image caption
+    type: text
+  - name: pdf
+    label: Optional PDF
+    type: file
+    options:
+      extensions:
+      - pdf

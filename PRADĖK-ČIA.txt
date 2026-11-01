@@ -1,0 +1,53 @@
+GABIJOS PORTFOLIO — REDAGUOJAMA PER PAGES CMS
+============================================
+
+Šio aplanko svetainė jau turi visus paveikslėlius, tekstus ir tamsų dizainą.
+Jos turinį galėsite redaguoti per https://app.pagescms.org/.
+Hostingas: Netlify (nemokamas planas); domeną reikia įsigyti atskirai.
+
+1. Sukurk GitHub paskyrą: https://github.com/signup
+2. GitHub paspausk + > New repository.
+   Pavadinimas: gabby-portfolio
+   Visibility: Private (arba Public – tik jei norite, kad failai būtų matomi visiems).
+   Create repository. Kol kas nedėk README, .gitignore ar licencijos.
+3. Išarchyvuok ZIP. Atsidaryk išarchyvuotą aplanką „gabby-cms-project“.
+   GitHub sukurtame projekte spausk „uploading an existing file“ arba „Add file > Upload files“.
+   Įtempk VISĄ išarchyvuoto aplanko TURINĮ, įskaitant .pages.yml,
+   index.html, styles.css, script.js, cms-content.js, visus aplankus data ir assets.
+   Paspausk „Commit changes“.
+   SVARBU: index.html ir .pages.yml privalo būti REPOZITORIJOS ŠAKNYJE,
+   ne papildomame aplanke.
+4. Nueik į https://app.netlify.com/start ir prisijunk.
+   „Import an existing project“ > GitHub > „gabby-portfolio“.
+   Build command: PALIK TUŠČIĄ. Publish directory: . (taškas, arba root).
+   „Deploy“ / „Publish“. Gauni internetinį adresą *.netlify.app.
+5. Nueik į https://app.pagescms.org/ ir prisijunk su GitHub.
+   Leisk Pages CMS GitHub programėlei pasiekti savo „gabby-portfolio“ repozitoriją.
+   Atidaryk projektą ir pasirink norimą skyrių.
+   KEISK tekstus, įkelk nuotraukas arba PDF, spausk „Save“.
+   Pages CMS padarys pakeitimą GitHub, Netlify automatiškai perpublikuos svetainę.
+6. Norint SAVO DOMENO: Netlify > Site configuration / Domain management
+   > Add domain > Add a domain you already own. Sek nurodytus DNS įrašus.
+
+NAUJA NUOTRAUKA / DOKUMENTAS
+  Pages CMS > „08 — Extra image / new item“.
+  Įjunk „Show this new section“ (enabled), įrašyk pavadinimą ir įkelk paveikslėlį.
+  Išsaugok. Svetainėje atsiras atskiras naujas skyrius.
+
+MOKSLINIŲ DARBŲ PDF
+  Pages CMS > „03 — Research projects & PDF“.
+  Atidaryk projektą ir pasirink jo PDF failą.
+  Svetainėje atsiras mygtukas „View full research paper“.
+
+PASTABOS
+- Kuriant git + Netlify svarbu naudoti GITHUB IMPORT, o ne NETLIFY DROP.
+- Jei index.html atidarai tiesiai iš kompiuterio, atsidarys atsarginis bazinis turinys;
+  Pages CMS pakeitimai matomi paskelbtoje svetainėje.
+- Nenaudok GitHub saugoti slaptažodžius ar asmens dokumentus.
+- Prieš paviešinant patvirtink su Gabija, kad ji nori rodyti savo kontaktus.
+- Jei reikia, suteik Gabijai teisę į GitHub repozitoriją per Settings > Collaborators.
+  Tada ji galės jungtis prie Pages CMS per savo GitHub paskyrą.
+
+DOKUMENTACIJA:
+https://pagescms.org/docs/quick-start/
+https://docs.netlify.com/start/quickstarts/deploy-from-repository/
